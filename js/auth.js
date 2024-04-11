@@ -46,6 +46,6 @@ export const googleLogin = async () => {
     await signInWithPopup(auth, providerGoogle);
     alert("Đăng nhập thành công!");
   } catch (err) {
-    return toast.error(err.message);
+    alert(err.message);
   }
 };
