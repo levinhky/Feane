@@ -38,6 +38,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/gioHang.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
   </head>
@@ -159,7 +160,60 @@
       <!-- end header section -->
     </div>
 
-    <div class="noProduct">
+    <div class="card" id="productCartList">
+      <div class="row">
+        <div class="col-md-8 cart">
+          <div class="title">
+            <div class="row">
+              <div class="col">
+                <h4><b>Shopping Cart</b></h4>
+              </div>
+              <div
+                class="col align-self-center text-right text-muted"
+                id="cartItemsCount"
+              >
+                3 items
+              </div>
+            </div>
+          </div>
+          <div class="row border-top border-bottom" id="cartItemList">
+            <!-- product list -->
+          </div>
+          <div class="back-to-shop">
+            <a href="menu.html">&leftarrow;</a
+            ><span class="text-muted">Back to shop</span>
+          </div>
+        </div>
+        <div class="col-md-4 summary">
+          <div>
+            <h5><b>Summary</b></h5>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col" id="totalCartItem" style="padding-left: 0">
+              ITEMS 3
+            </div>
+            <div class="col text-right totalPrice">$1</div>
+          </div>
+          <form>
+            <p>SHIPPING</p>
+            <select>
+              <option class="text-muted">Standard-Delivery - $0</option>
+            </select>
+          </form>
+          <div
+            class="row"
+            style="border-top: 1px solid rgba(0, 0, 0, 0.1); padding: 2vh 0"
+          >
+            <div class="col">TOTAL PRICE</div>
+            <div class="col text-right totalPrice">&euro; 137.00</div>
+          </div>
+          <button class="btn" id="btnCheckout">CHECKOUT</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="noProduct">
       <h1 style="text-align: center; margin: 50px 0">
         Không có sản phẩm nào trong giỏ hàng
       </h1>
@@ -257,9 +311,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
     <!-- custom js -->
     <script type="module" src="js/firebase.js"></script>
-    <script type="module" src="js/mock.js"></script>
-    <script type="module" src="js/filter.js"></script>
     <script type="module" src="js/cart.js"></script>
+    <script type="module" src="js/cartItems.js"></script>
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
     <!-- End Google Map -->

@@ -5,7 +5,6 @@
 />
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +48,7 @@
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
-    <title>Bootstrap 4 Login/Register Form</title>
+    <title>Login</title>
   </head>
   <body>
     <!-- header section strats -->
@@ -164,25 +163,10 @@
     <!-- end header section -->
 
     <div id="logreg-forms">
-      <form class="form-signin">
+      <form id="signInForm" class="form-signin">
         <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">
           Sign in
         </h1>
-        <div class="social-login">
-          <!-- <button class="btn facebook-btn social-btn" type="button">
-            <span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span>
-          </button> -->
-          <button
-            class="btn google-btn social-btn"
-            id="googlelogin"
-            type="button"
-          >
-            <span
-              ><i class="fab fa-google-plus-g"></i> Sign in with Google+</span
-            >
-          </button>
-        </div>
-        <p style="text-align: center">OR</p>
         <input
           type="email"
           id="inputEmail"
@@ -210,49 +194,7 @@
         </button>
       </form>
 
-      <form action="/reset/password/" class="form-reset">
-        <input
-          type="email"
-          id="resetEmail"
-          class="form-control"
-          placeholder="Email address"
-          required=""
-          autofocus=""
-        />
-        <button class="btn btn-primary btn-block" type="submit">
-          Reset Password
-        </button>
-        <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
-      </form>
-
-      <form action="/signup/" class="form-signup">
-        <!-- <div class="social-login">
-          <button class="btn facebook-btn social-btn" type="button">
-            <span><i class="fab fa-facebook-f"></i> Sign up with Facebook</span>
-          </button>
-        </div> -->
-        <div class="social-login">
-          <button
-            class="btn google-btn social-btn"
-            id="googlelogin"
-            type="button"
-          >
-            <span
-              ><i class="fab fa-google-plus-g"></i> Sign up with Google+</span
-            >
-          </button>
-        </div>
-
-        <p style="text-align: center">OR</p>
-
-        <input
-          type="text"
-          id="user-name"
-          class="form-control"
-          placeholder="Full name"
-          required=""
-          autofocus=""
-        />
+      <form id="signUpForm" action="/signup/" class="form-signup">
         <input
           type="email"
           id="user-email"
