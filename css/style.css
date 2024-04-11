@@ -140,6 +140,7 @@ a:focus {
 
 .header_section {
   padding: 15px 0;
+  background-color: black;
 }
 
 .header_section .container-fluid {
@@ -562,7 +563,7 @@ a:focus {
           justify-content: space-between;
 }
 
-.food_section .box .options a {
+.food_section .box .options button {
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -578,7 +579,7 @@ a:focus {
           align-items: center;
 }
 
-.food_section .box .options a svg {
+.food_section .box .options button svg {
   width: 18px;
   height: auto;
   fill: #ffffff;

@@ -11,10 +11,9 @@ const firebaseConfig = {
   storageBucket: "feane-49ad1.appspot.com",
   messagingSenderId: "305851413167",
   appId: "1:305851413167:web:922cb908eb0ec50b0ada5a",
-  databaseURL: dbKey,
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const database = getDatabase(app);
-export const firestore = getFirestore(app);
+export const db = getFirestore(app);
