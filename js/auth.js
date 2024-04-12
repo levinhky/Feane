@@ -9,21 +9,24 @@ const auth = getAuth();
 
 const renderAuth = () => {
   let userInfo = JSON.parse(localStorage.getItem("userInfo")) || {};
+  const userLink = document.querySelector(".user_link");
+  const userNameDisplay = document.getElementById("userNameDisplay");
+  const logOutBtn = document.getElementById("logOutBtn");
 
   if (userInfo.uid) {
-    document.querySelector(".user_link").style.display = "none";
-    document.getElementById("userNameDisplay").style.display = "block";
-    document.getElementById("userNameDisplay").innerHTML = `Hi ${userInfo.email.split("@")[0]}`;
-    document.getElementById("logOutBtn").style.display = "block";
+    userLink.style.display = "none";
+    userNameDisplay.style.display = "block";
+    userNameDisplay.innerHTML = `Hi ${userInfo.email.split("@")[0]}`;
+    logOutBtn.style.display = "block";
 
-    document.getElementById("logOutBtn").addEventListener("click", () => {
+    logOutBtn.addEventListener("click", () => {
       logout();
       window.location.reload();
     });
   } else {
-    document.querySelector(".user_link").style.display = "block";
-    document.getElementById("userNameDisplay").style.display = "none";
-    document.getElementById("logOutBtn").style.display = "none";
+    userLink.style.display = "block";
+    userNameDisplay.style.display = "none";
+    logOutBtn.style.display = "none";
   }
 };
 

@@ -1,9 +1,4 @@
-import {
-  clearCartAndCheckout,
-  decreaseItemQuantity,
-  increaseItemQuantity,
-  removeItemFromCart,
-} from "./cart.js";
+import { clearCartAndCheckout, decreaseItemQuantity, increaseItemQuantity, removeItemFromCart } from "./cart.js";
 
 const renderCartItems = () => {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -14,6 +9,10 @@ const renderCartItems = () => {
   const cartItemList = document.getElementById("cartItemList");
   const cartItemsCount = document.getElementById("cartItemsCount");
   const totalPrices = document.querySelectorAll(".totalPrice");
+  const btnDecrease = document.getElementById("decrease");
+  const btnIncrease = document.getElementById("increase");
+  const btnRemove = document.getElementById("removeItem");
+  const btnCheckout = document.getElementById("btnCheckout");
 
   if (cart.length > 0) {
     const { totalItems, totalPrice } = cart.reduce(
@@ -26,7 +25,7 @@ const renderCartItems = () => {
     );
 
     totalCartItem.innerHTML = `Items ${cart.length}`;
-    cartItemsCount.innerHTML = `${cart.length} Items`
+    cartItemsCount.innerHTML = `${cart.length} Items`;
     totalPrices.forEach((el) => (el.innerHTML = `$${totalPrice}`));
 
     const items = cart.map((product) => {
@@ -52,24 +51,22 @@ const renderCartItems = () => {
 
     cartItemList.innerHTML = items.join("");
 
-    document.getElementById("decrease").addEventListener("click", (event) => {
+    btnDecrease.addEventListener("click", (event) => {
       const id = event.target.getAttribute("data-product-id");
       decreaseItemQuantity(id);
       window.location.reload();
     });
-    document.getElementById("increase").addEventListener("click", (event) => {
+    btnIncrease.addEventListener("click", (event) => {
       const id = event.target.getAttribute("data-product-id");
       increaseItemQuantity(id);
       window.location.reload();
     });
-    document.getElementById("removeItem").addEventListener("click", (event) => {
+    btnRemove.addEventListener("click", (event) => {
       const id = event.target.getAttribute("data-product-id");
       removeItemFromCart(id);
       window.location.reload();
     });
-    document
-      .getElementById("btnCheckout")
-      .addEventListener("click", () => clearCartAndCheckout());
+    btnCheckout.addEventListener("click", () => clearCartAndCheckout());
   }
 
   productCartList.style.display = cart.length ? "block" : "none";
