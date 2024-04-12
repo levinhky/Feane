@@ -2,7 +2,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut
+  signOut,
 } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
 
 const auth = getAuth();
@@ -34,7 +34,7 @@ export const registerEmail = (email, password) => {
     .then((userCredential) => {
       const user = userCredential.user;
       alert("Đăng ký thành công!, bạn đã tự động đăng nhập");
-      console.log(user);
+      window.location.href = "index.html";
       localStorage.setItem("userInfo", JSON.stringify(user));
     })
     .catch((error) => {
@@ -47,6 +47,7 @@ export const loginEmail = (email, password) => {
     .then((userCredential) => {
       const user = userCredential.user;
       alert("Đăng nhập thành công!");
+      window.location.href = "index.html";
       localStorage.setItem("userInfo", JSON.stringify(user));
     })
     .catch((error) => {
