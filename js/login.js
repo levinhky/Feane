@@ -51,8 +51,7 @@ $(document).ready(function () {
 
     $("#signUpForm").submit(function (event) {
       event.preventDefault();
-      console.log(emailRegValue, passwordRegValue);
-      // loginEmail(emailLoginValue, passwordLoginValue);
+      registerEmail(emailRegValue, passwordRegValue);
     });
   });
 });

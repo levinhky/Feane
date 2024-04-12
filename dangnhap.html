@@ -1,8 +1,4 @@
-<link
-  href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-  rel="stylesheet"
-  id="bootstrap-css"
-/>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -77,9 +73,7 @@
                 <a class="nav-link" href="index.html">Home </a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="menu.html"
-                  >Menu <span class="sr-only">(current)</span>
-                </a>
+                <a class="nav-link" href="menu.html">Menu <span class="sr-only">(current)</span> </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
@@ -92,6 +86,8 @@
               <a href="dangnhap.html" class="user_link">
                 <i class="fa fa-user" aria-hidden="true"></i>
               </a>
+              <h6 id="userNameDisplay" style="color: white; margin: 0">Hello Rock</h6>
+              <h6 id="logOutBtn" style="color: white; margin-left: 20px; margin-bottom: 0"><button>Logout</button></h6>
               <a class="cart_link" href="giohang.html">
                 <svg
                   version="1.1"
@@ -164,28 +160,11 @@
 
     <div id="logreg-forms">
       <form id="signInForm" class="form-signin">
-        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">
-          Sign in
-        </h1>
-        <input
-          type="email"
-          id="inputEmail"
-          class="form-control"
-          placeholder="Email address"
-          required=""
-          autofocus=""
-        />
-        <input
-          type="password"
-          id="inputPassword"
-          class="form-control"
-          placeholder="Password"
-          required=""
-        />
+        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Sign in</h1>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" />
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" />
 
-        <button class="btn btn-success btn-block" type="submit">
-          <i class="fas fa-sign-in-alt"></i> Sign in
-        </button>
+        <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
         <!-- <a href="#" id="forgot_pswd">Forgot password?</a> -->
         <hr />
         <!-- <p>Don't have an account!</p>  -->
@@ -195,22 +174,8 @@
       </form>
 
       <form id="signUpForm" action="/signup/" class="form-signup">
-        <input
-          type="email"
-          id="user-email"
-          class="form-control"
-          placeholder="Email address"
-          required
-          autofocus=""
-        />
-        <input
-          type="password"
-          id="user-pass"
-          class="form-control"
-          placeholder="Password"
-          required
-          autofocus=""
-        />
+        <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="" />
+        <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="" />
         <input
           type="password"
           id="user-repeatpass"
@@ -220,12 +185,8 @@
           autofocus=""
         />
 
-        <button class="btn btn-primary btn-block" type="submit">
-          <i class="fas fa-user-plus"></i> Sign Up
-        </button>
-        <a href="#" id="cancel_signup"
-          ><i class="fas fa-angle-left"></i> Back</a
-        >
+        <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+        <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
       </form>
       <br />
     </div>
@@ -257,8 +218,8 @@
             <div class="footer_detail">
               <a href="" class="footer-logo"> Feane </a>
               <p>
-                Necessary, making this the first true generator on the Internet.
-                It uses a dictionary of over 200 Latin words, combined with
+                Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin
+                words, combined with
               </p>
               <div class="footer_social">
                 <a href="">
@@ -306,6 +267,7 @@
       <script type="module" src="/js/firebase.js"></script>
       <script type="module" src="/js/login.js"></script>
       <script type="module" src="/js/cart.js"></script>
+      <script type="module" src="/js/auth.js"></script>
     </p>
   </body>
 </html>
