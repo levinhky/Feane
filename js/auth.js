@@ -13,6 +13,7 @@ const renderAuth = () => {
   if (userInfo.uid) {
     document.querySelector(".user_link").style.display = "none";
     document.getElementById("userNameDisplay").style.display = "block";
+    document.getElementById("userNameDisplay").innerHTML = `Hi ${userInfo.email.split("@")[0]}`;
     document.getElementById("logOutBtn").style.display = "block";
 
     document.getElementById("logOutBtn").addEventListener("click", () => {
